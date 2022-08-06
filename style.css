@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+input:focus  {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fb-header{
+    padding: 3px 12px 3px 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+
+}
+
+.fb-brands{
+    display: flex;
+    align-items: center;
+}
+
+.fb-brands .search {
+    position: relative;
+    margin-left: 4px;
+}
+
+.fb-brands .search input {
+    border-radius: 50px;
+    padding: 7px 20px 7px 35px;
+    background-color: #f0f2f5;
+    border: none;
+}
+
+.fb-brands .search button {
+    position: absolute;
+    border: none;
+    left: 12px;
+    top: 7px;
+}
+
+
+/* menu part */
+
+.fb-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    height: 47px;
+}
+
+.fb-menu ul li{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.fb-menu ul li:hover{
+    background-color: #f0f2f5;
+}
+
+.fb-menu ul li.active:hover{
+    background-color: transparent;
+}
+
+.fb-menu ul li a{
+    display: block;
+    color: #65676b;
+    margin-top: 11px;
+}
+
+.fb-menu ul li.active a{
+    color: #1b74e4;
+}
+.fb-menu ul li.active::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: #1b74e4;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+
+
+/* Fb auth */
+
+.fb-auth ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 3px;
+}
+
+.fb-auth ul li {
+    margin: 0 4px;
+}
+.fb-auth ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #e4e6eb;
+    color: #050505;
+    border-radius: 50%;
+    line-height: 34px;
+    font-size: 18px;
+    transition: .2s;
+}
+
+.fb-auth ul li a:hover{
+    background-color: #d5cfcfe0;
+}
+
+
+/* fb body part */
+
+.fb-body{
+    background-color: #f0f2f5;
+    padding: 75px 12px 0 12px;
+    min-height: 100vh;
+    
+}
+
+.user-list{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    width: 70%;
+    border-radius: 10px ;
+    cursor: pointer;
+    
+
+}
+
+.user-list:hover{
+    background-color: #E6E7EA;
+}
+
+.user-list .left-img img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+/* Story Area  */
+
+.fb-story-area{
+    display: flex;
+    justify-content: space-between;
+}
+.fb-story-area .story-box {
+    background-color: white;
+    height: 185px;
+    width: 104px;
+    padding: 10px;
+    border-radius: 10px;
+    background-size: auto 100%;
+    background-position: center center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    transition: .2s ease-in-out ;
+}
+.fb-story-area .story-box:hover{
+    background-size: auto 103%;
+}
+
+.fb-story-area .story-box:hover::after {
+    content: '';
+    position: absolute;
+    background-color: #1e1d1d0f;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.fb-story-area .story-box:nth-child(1){
+    background-image: url(./media/avatar1.jpg);
+}
+.fb-story-area .story-box:nth-child(2){
+    background-image: url(./media/avatar2.jpg);
+}
+.fb-story-area .story-box:nth-child(3){
+    background-image: url(./media/avatar3.jpg);
+}
+.fb-story-area .story-box:nth-child(4){
+    background-image: url(./media/avatar4.jpg);
+}
+.fb-story-area .story-box:nth-child(5){
+    background-image: url(./media/avatar5.jpg);
+}
+
+.fb-story-area .story-box .avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid #1876f2;
+    overflow: hidden;
+
+}
+
+.fb-story-area .story-box span {
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.fb-story-area .story-box .own-avatar{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 6px 0;
+    text-align: center;
+}
+
+.fb-story-area .story-box .own-avatar span{
+    color: black;
+}
+
+.fb-story-area .story-box .own-avatar a {
+    background-color: blue;
+    color: white;
+    height: 16px;
+    width: 16px;
+    line-height: 17px;
+    font-size: 13px;
+    padding: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: content-box;
+    transform: translate(0px, -23px);
+    border: 4px solid white;
+}
